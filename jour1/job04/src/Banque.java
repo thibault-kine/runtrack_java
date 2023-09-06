@@ -1,25 +1,22 @@
 public class Banque {
 
-    static int balance = 100;
+    int balance;
 
-    public static void main(String[] args) {
-        displayBalance();
-        deposit(30);
-        withdraw(50);
-        displayBalance();
+    public Banque(int amount) {
+        balance = amount;
     }
 
-    public static void displayBalance() {
+    public void displayBalance() {
         System.out.printf("Solde actuel: %d€\n", balance);
     }
 
-    public static void deposit(int amount) {
+    public void deposit(int amount) {
         amount = Math.abs(amount);
         balance += amount;
         System.out.printf("%d€ déposés. Nouveau solde: %d€\n", amount, balance);
     }
 
-    public static void withdraw(int amount) {
+    public void withdraw(int amount) {
         amount = Math.abs(amount);
         balance -= amount;
         if(balance < 0) {
