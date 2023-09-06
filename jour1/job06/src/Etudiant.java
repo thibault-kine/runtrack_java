@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class Etudiant {
 
     String name;
     // I used an ArrayList because a normal array is too limited
-    ArrayList<Integer> grades = new ArrayList<Integer>();
+    ArrayList<Integer> grades = new ArrayList<>();
 
     public Etudiant(String studentName) {
         this.name = studentName;
