@@ -1,6 +1,13 @@
 public class Voiture {
 
+    String brand;
+    String color;
     int speed = 0;
+
+    public Voiture(String brand, String color) {
+        this.brand = brand;
+        this.color = color;
+    }
 
     public void start() {
         System.out.println("La voiture démarre.");
