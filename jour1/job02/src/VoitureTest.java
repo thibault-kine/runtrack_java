@@ -4,8 +4,8 @@ public class VoitureTest {
         Voiture voiture = new Voiture("Volkswagen", "red");
 
         voiture.start();
-        voiture.speedUp();
-        voiture.speedUp();
+        voiture.speedUp(10);
+        voiture.speedUp(10);
         voiture.brake();
     }
 }

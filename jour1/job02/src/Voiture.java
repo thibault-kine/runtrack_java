@@ -13,9 +13,15 @@ public class Voiture {
         System.out.println("La voiture démarre.");
     }
 
-    public void speedUp() {
-        speed += 10;
-        System.out.printf("La vitesse est maintenant %dkm/h.\n", speed);
+    public void speedUp(int speedAmount) {
+        try {
+            speed += speedAmount;
+            if(speed > 100) throw new VitesseLimiteDepasseeException();
+            System.out.printf("La vitesse est maintenant %dkm/h.\n", speed);
+        }
+        catch(Exception e) {
+            System.out.println("Erreur: " + e);
+        }
     }
 
     public void brake() {
