@@ -1,5 +1,6 @@
 public class SynchronizationExercice implements Runnable {
 
+    // I declare every needed variable here (all static because we need to use them in the main() method)
     static Banque banque;
     static int amountToWithdraw;
 
@@ -8,6 +9,7 @@ public class SynchronizationExercice implements Runnable {
 
     public static void main(String[] args) {
 
+        // I initialize every variable
         banque = new Banque(Integer.parseInt(args[0]));
         amountToWithdraw = Integer.parseInt(args[1]);
 
