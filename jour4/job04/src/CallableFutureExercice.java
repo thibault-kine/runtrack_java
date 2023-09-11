@@ -27,12 +27,8 @@ public class CallableFutureExercice {
             // Basically an "await" statement
             result = future.get();
             System.out.printf("Résultat de la multiplication: %d", result);
-        }
-        catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        catch (ExecutionException e) {
-            e.printStackTrace();
+        } catch (ExecutionException | InterruptedException ex) {
+            throw new RuntimeException(ex);
         }
     }
 }
