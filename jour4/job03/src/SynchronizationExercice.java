@@ -1,7 +1,7 @@
 public class SynchronizationExercice implements Runnable {
 
     // I declare every needed variable here (all static because we need to use them in the main() method)
-    static Banque banque;
+    static SyncBank banque;
     static int amountToWithdraw;
 
     static Thread t1 = new Thread(new SynchronizationExercice());
@@ -10,7 +10,7 @@ public class SynchronizationExercice implements Runnable {
     public static void main(String[] args) {
 
         // I initialize every variable
-        banque = new Banque(Integer.parseInt(args[0]));
+        banque = new SyncBank(Integer.parseInt(args[0]));
         amountToWithdraw = Integer.parseInt(args[1]);
 
         // Both threads will run the code in the run() method at the same time
