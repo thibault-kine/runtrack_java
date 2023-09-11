@@ -1,5 +1,4 @@
-// I prefer to implement Runnable instead of extending Thread because a class can't extend to more than 1 class
-public class SimpleThreadExercice implements Runnable {
+public class SimpleThreadExercice extends Thread {
     public static void main(String[] args) {
 
         Thread thread = new Thread(new SimpleThreadExercice());
