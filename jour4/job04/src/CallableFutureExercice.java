@@ -7,7 +7,7 @@ public class CallableFutureExercice {
         // Creates a single-threaded executor (a "box" of threads)
         ExecutorService executor = Executors.newSingleThreadExecutor();
         // Creates a promise of sending the result ("async" statement)
-        Future<Integer> r = executor.submit(new Callable<Integer>() {
+        Future<Integer> future = executor.submit(new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
                 // Just basic math
@@ -22,7 +22,7 @@ public class CallableFutureExercice {
 
         try {
             // Basically an "await" statement
-            result = r.get();
+            result = future.get();
             System.out.printf("Résultat de la multiplication: %d", result);
         }
         catch (InterruptedException e) {
