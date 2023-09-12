@@ -13,15 +13,16 @@ public class StreamFilterExercice {
             numbers.add(Integer.parseInt(args[i]));
         }
 
-        String numbersString =
+        System.out.printf(
+                "Nombres supérieurs à %d: %s\n",
+                reference,
                 numbers.stream()
                         // filters out any number smaller than the reference
                         .filter(n -> n > reference)
                         // convert the object to a String
                         .map(Object::toString)
                         // collect them and separate them with a ", " in-between
-                        .collect(Collectors.joining(", "));
-
-        System.out.printf("Nombres supérieurs à %d: %s\n", reference, numbersString);
+                        .collect(Collectors.joining(", "))
+        );
     }
 }
