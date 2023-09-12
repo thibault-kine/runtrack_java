@@ -3,11 +3,12 @@ import java.util.concurrent.*;
 public class ExecutorServiceExercice {
     public static void main(String[] args) {
 
-        int factor = Integer.parseInt(args[0]);
+//        int factor = Integer.parseInt(args[0]);
+        int factor = 4;
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        for(int i = 1; i <= 3; i++) {
+        for(int i = 1; i <= factor; i++) {
             int x = i;
             executor.submit(new Callable<Void>() {
                 @Override
