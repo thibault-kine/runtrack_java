@@ -3,7 +3,7 @@ import java.util.concurrent.*;
 public class ExecutorServiceExercice {
     public static void main(String[] args) {
 
-        int factor = 3;
+        int factor = Integer.parseInt(args[0]);
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
